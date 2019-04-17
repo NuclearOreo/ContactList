@@ -2,12 +2,18 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 import colors from '../../config/colors';
+import { capitalizeFirstLetter } from '../../helpers/string';
+import styles from './styles';
 
-const Header = () => {
+const Header = ({ picture, name }) => {
     return (
-        <View>
-            <Text>
-                Hello
+        <View style={styles.headerContainer} >
+            <Image
+                source={{uri: picture.large }}
+                style={styles.image}
+            />
+            <Text style={styles.name}>
+                { capitalizeFirstLetter(name.first) } { capitalizeFirstLetter(name.last) }
             </Text>
         </View>
     )   

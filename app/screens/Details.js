@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 import { Header } from '../components/Details'
+import colors from '../config/colors'
 
 class Details extends Component {
     render() {
+        const contact =  this.props.navigation.state.params;
         return (
-            <Header />
+            <View style={{ backgroundColor: colors.background }} >
+                <Header {...contact} />
+            </View>
         );
     }
 }
