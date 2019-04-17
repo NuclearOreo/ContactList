@@ -3,6 +3,8 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Contacts from '../screens/Contacts';
 import Details from '../screens/Details';
 
+
+
 const ContactsStack = createStackNavigator({
     Contacts: {
         screen: Contacts,
@@ -12,9 +14,9 @@ const ContactsStack = createStackNavigator({
     },
     Details: {
         screen: Details,
-        navigationOptions: {
-            title: 'Contacts'
-        }
+        navigationOptions: ({navigation}) => ({
+            title: `${navigation.state.params.name.first} ` + `${navigation.state.params.name.last}`
+        })
     }
 });
 
