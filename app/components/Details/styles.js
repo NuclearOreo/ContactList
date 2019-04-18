@@ -4,6 +4,7 @@ import colors from '../../config/colors';
 
 const window = Dimensions.get('window');
 
+export const ICON_SIZE = 25;
 export default StyleSheet.create({
     image: {
         width: window.width / 2,
@@ -19,5 +20,38 @@ export default StyleSheet.create({
         fontSize: 22,
         marginTop: 10,
         color: colors.primary
+    },
+    actionContainer: {
+        borderTopWidth: StyleSheet.hairlineWidth,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderTopColor: colors.border,
+        borderBottomColor: colors.border,
+        paddingVertical: 15,
+        backgroundColor: colors.greyBackground
+    },
+    actionRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 20
+    },
+    actionInfo: {
+        flexDirection: 'column'
+    },
+    actionLabel: {
+        fontSize: 12,
+        color: colors.subtle,
+        marginBottom: 3
+    },
+    actionBody:{
+        fontSize: 16,
+        color: colors.primary,
+        marginBottom: 5
+    },
+    actionIcons: {
+        flexDirection: 'row'
+    },
+    actionIcon: {
+        marginLeft: 13
     }
 });
