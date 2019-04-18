@@ -9,7 +9,7 @@ const Actions = ({ email, cell, phone }) => {
     return (
         <View style={styles.actionContainer}>
             <Row 
-                Label='email'
+                Label='Email'
                 body={email}
                 actions={[
                         {
