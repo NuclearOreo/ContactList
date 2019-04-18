@@ -1,4 +1,5 @@
 import { createStackNavigator, createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import Contacts from '../screens/Contacts';
 import Details from '../screens/Details';
@@ -20,23 +21,41 @@ const ContactsStack = createStackNavigator({
     }
 });
 
-const Tabs = createBottomTabNavigator({
-    Contacts: {
-        screen: ContactsStack,
-        navigationOptions: {
-            title: 'Contacts'
-        }
-    },
+const NewContactsStack = createStackNavigator({
     NewContact: {
         screen: NewContact,
         navigationOptions: {
             title: 'New Contacts'
         }
     },
+});
+
+const MeStack = createStackNavigator({
     Me: {
         screen: Me,
         navigationOptions: {
             title: 'Me'
+        }
+    },
+});
+
+const Tabs = createBottomTabNavigator({
+    Contacts: {
+        screen: ContactsStack,
+        navigationOptions: {
+            tabBarLabel: 'Contacts',
+        }
+    },
+    NewContact: {
+        screen: NewContactsStack,
+        navigationOptions: {
+            tabBarLabel: 'New Contacts'
+        }
+    },
+    Me: {
+        screen: MeStack,
+        navigationOptions: {
+            tabBarLabel: 'Me'
         }
     }
 });
