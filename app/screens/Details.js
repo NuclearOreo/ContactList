@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import { Header, Actions } from '../components/Details'
 import colors from '../config/colors'
